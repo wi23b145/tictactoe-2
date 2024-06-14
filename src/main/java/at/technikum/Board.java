@@ -1,6 +1,8 @@
 package at.technikum;
 
 public class Board {
+
+
     private char[][] cells;
 
     public Board() {
@@ -25,8 +27,24 @@ public class Board {
         cells[x][y] = marker;
     }
 
-    // rest einfügen
+    public boolean isFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (cells[i][j] == ' ') {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
+    public void clear() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                cells[i][j] = ' ';
+            }
+        }
+    }
 
     public void print() {
         for (int i = 0; i < 3; i++) {
@@ -42,14 +60,6 @@ public class Board {
     public char[][] getCells() {
         return cells;
     }
-
-
-
-
-
-
-
-
-
-
 }
+
+
