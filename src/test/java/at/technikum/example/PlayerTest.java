@@ -1,8 +1,12 @@
-package at.technikum;
+package at.technikum.example;
 
+import at.technikum.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+
+
 
 class PlayerTest {
 
@@ -20,3 +24,4 @@ class PlayerTest {
         assertEquals("Bob", player.getName());
     }
 }
+
