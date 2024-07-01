@@ -15,6 +15,8 @@ jobs:
       with:
         java-version: '22'
         distribution: 'temurin'
-    - name: List directory contents
+    - name: List root directory contents
+      run: ls -la
+    - name: List tictactoe-project directory contents
       run: ls -la ./tictactoe-project
-    - run: mvn test --file ./tictactoe-project/xml/pom.xml
+    - run: mvn test --file ./tictactoe-project/pom.xml
