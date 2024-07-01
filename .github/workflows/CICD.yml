@@ -5,10 +5,8 @@ on:
     branches: 
       - '**'
   
-
 jobs:
   build-and-test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -17,4 +15,6 @@ jobs:
       with:
         java-version: '22'
         distribution: 'temurin'
-    - run: mvn test --file ./tictactoe-project/pom.xml
+    - name: List directory contents
+      run: ls -la ./tictactoe-project
+    - run: mvn test --file ./tictactoe-project/xml/pom.xml
