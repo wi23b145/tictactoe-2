@@ -19,4 +19,4 @@ jobs:
       run: ls -la
     - name: List tictactoe-project directory contents
       run: ls -la ./tictactoe-project
-    - run: mvn test --file ./tictactoe-project/pom.xml
+    - run: mvn test --file ./pom.xml
